@@ -14,7 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Fixes Notify opacity inssues
-vim.o.termiguicolors = true
+-- vim.o.termiguicolors = true
 
 -- Setup lazy.nvim
 require("lazy").setup({
