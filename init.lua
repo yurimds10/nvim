@@ -1,5 +1,5 @@
-require("config.keymaps")
 require("config.lazy")
+require("config.keymaps")
 
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
