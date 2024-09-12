@@ -15,7 +15,10 @@ return {
           "java",
         },
         highlight = { enable = true },
-        indent = { enable = true },  
+        indent = { enable = true },
+        rainbow = {
+          enable = true;
+        },
       })
     end
   }
