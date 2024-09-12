@@ -39,7 +39,6 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
-vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
 
 local builtin = require('telescope.builtin')
