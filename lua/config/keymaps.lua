@@ -1,4 +1,5 @@
 local map = vim.keymap.set
+local opts = { noremap = true, silent = true }
 
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
@@ -91,3 +92,10 @@ map("n", "]q", vim.cmd.cnext, { desc = "Next Quickfix" })
 
 -- formatting
 
+-- Select all
+map("n", "<C-a>", "gg<S-v>G")
+
+-- Diagnostics
+map("n", "<C-j>", function()
+	vim.diagnostic.goto_next()
+end, opts)
