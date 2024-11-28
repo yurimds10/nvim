@@ -13,7 +13,7 @@
         #angularls = {enable = true;};
         jdtls = {enable = true;};
         dockerls = {enable = true;};
-        sqlls = {enable = true;};
+        #sqlls = {enable = true;};
         lua_ls = {enable = true;};
         nil_ls = {enable = true;};
         ts_ls = {enable = true;};
