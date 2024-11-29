@@ -16,16 +16,12 @@
     ./plugins/lsp/lsp.nix
 
     # Mini
-    ./plugins/mini/align.nix
-    ./plugins/mini/diff.nix
-    ./plugins/mini/hipatterns.nix
-    ./plugins/mini/icons.nix
-    ./plugins/mini/indentscope.nix
-    ./plugins/mini/pairs.nix
+    ./plugins/mini/default.nix
 
     # Snacks
 
     # Theme
+    ./plugins/themes/gruvbox-dark.nix
 
     # UI
 

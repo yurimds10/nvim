@@ -18,7 +18,7 @@
       ];
 
       perSystem =
-        { pkgs, system, lib, self', ... }:
+        { pkgs, system, lib, ... }:
         let
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
@@ -37,8 +37,6 @@
             # Run `nix flake check .` to verify that your config is not broken
             default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
           };
-
-	  formatter = pkgs.nixfmt-rfc-style;
 
           packages = {
             default = nvim;

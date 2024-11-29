@@ -22,7 +22,7 @@
             option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
             keywordLength = 3;
           }
-          {name = "copilot";}
+          #{name = "copilot";}
           {
             name = "path"; # file system paths
             keywordLength = 3;
@@ -34,8 +34,8 @@
         ];
 
         window = {
-          completion = {border = "bordered";};
-          documentation = {border = "bordered";};
+          completion = {border = "solid";};
+          documentation = {border = "solid";};
         };
 
         mapping = {
