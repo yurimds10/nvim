@@ -1,4 +1,9 @@
 {
+  plugins.mini = {
+    enable = true;
+    mockDevIcons = true;
+  };
+
   imports = [
     ./align.nix
     ./diff.nix

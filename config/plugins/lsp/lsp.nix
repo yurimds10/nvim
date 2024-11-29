@@ -10,10 +10,16 @@
       servers = {
         html = {enable = true;};
         cssls = {enable = true;};
-        #angularls = {enable = true;};
+        angularls = {
+	  enable = true;
+	  package = null;
+	};
         jdtls = {enable = true;};
         dockerls = {enable = true;};
-        #sqlls = {enable = true;};
+        sqlls = {
+	  enable = true;
+	  package = null;
+	};
         lua_ls = {enable = true;};
         nil_ls = {enable = true;};
         ts_ls = {enable = true;};

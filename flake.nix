@@ -8,7 +8,7 @@
   };
 
   outputs =
-    { nixvim, flake-parts, ... }@inputs:
+    { nixpkgs, nixvim, flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
@@ -18,7 +18,7 @@
       ];
 
       perSystem =
-        { pkgs, system, ... }:
+        { pkgs, system, lib, self', ... }:
         let
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
@@ -38,8 +38,9 @@
             default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
           };
 
+	  formatter = pkgs.nixfmt-rfc-style;
+
           packages = {
-            # Lets you run `nix run .` to start nixvim
             default = nvim;
           };
         };
