@@ -9,7 +9,7 @@
     ./diff.nix
     ./hipatterns.nix
     ./icons.nix
-    ./indentscope.nix
+    #./indentscope.nix
     ./pairs.nix
   ];
 }

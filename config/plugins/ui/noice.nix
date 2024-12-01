@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       notify = {
-        enabled = false;
+        enabled = true;
         view = "notify";
       };
       messages = {
@@ -15,7 +15,7 @@
           enabled = false;
         };
         progress = {
-          enabled = false;
+          enabled = true;
           view = "mini";
         };
       };
