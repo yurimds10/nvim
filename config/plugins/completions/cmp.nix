@@ -1,19 +1,33 @@
 {
   plugins = {
     cmp-emoji = { enable = true; };
+    cmp-nvim-lsp = {enable = true;}; # lsp
+    cmp-buffer = {enable = true;};
+    cmp-path = {enable = true;};     # file system paths
+    cmp_luasnip = {enable = true;};  # snippets
+    cmp-cmdline = {enable = false;}; # autocomplete for cmdline
+
     cmp = {
       enable = true;
       settings = {
         autoEnableSources = true;
         experimental = {ghost_text = false;};
+        
         performance = {
           debounce = 60;
           fetchingTimeout = 200;
           maxViewEntries = 30;
         };
-        snippet = {expand = "luasnip";};
+        
+        snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
+        
         formatting = {fields = ["kind" "abbr" "menu"];};
+
         sources = [
+          {
+            name = "luasnip"; # snippets
+            keywordLength = 3;
+          }
           {name = "git";}
           {name = "nvim_lsp";}
           {name = "emoji";}
@@ -22,20 +36,15 @@
             option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
             keywordLength = 3;
           }
-          #{name = "copilot";}
           {
             name = "path"; # file system paths
-            keywordLength = 3;
-          }
-          {
-            name = "luasnip"; # snippets
             keywordLength = 3;
           }
         ];
 
         window = {
-          completion = {border = "solid";};
-          documentation = {border = "solid";};
+          completion = "cmp.config.window.bordered()";
+          documentation = "cmp.config.window.bordered()";
         };
 
         mapping = {
@@ -51,11 +60,5 @@
         };
       };
     };
-
-    cmp-nvim-lsp = {enable = true;}; # lsp
-    cmp-buffer = {enable = true;};
-    cmp-path = {enable = true;};     # file system paths
-    cmp_luasnip = {enable = true;};  # snippets
-    cmp-cmdline = {enable = false;}; # autocomplete for cmdline
   };
 }
