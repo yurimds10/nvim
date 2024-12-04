@@ -42,14 +42,12 @@
           }
         ];
 
-        window = {
-          completion = {
-            border = "solid";
-          };
-          documentation = {
-            border = "solid";
-          };
-        };
+        window.__raw = ''
+          {
+            completion = cmp.config.window.bordered(),
+            documentation = cmp.config.window.bordered(),
+          }
+        '';
 
         mapping = {
           "<C-Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
