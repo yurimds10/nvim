@@ -1,9 +1,9 @@
 {
   imports = [
 
-    ./options/settings.nix
-    ./options/keymaps.nix
-    ./options/auto-cmds.nix
+    ./core/settings.nix
+    ./core/keymaps.nix
+    ./core/auto-cmds.nix
 
     # Completions
     ./plugins/completions/cmp.nix
@@ -28,9 +28,10 @@
     ./plugins/mini/default.nix
 
     # Snacks
+    ./plugins/snacks/default.nix
 
     # Theme
-    ./plugins/themes/gruvbox-material-dark.nix
+    ./plugins/themes/gruvbox-dark.nix
 
     # UI
     ./plugins/ui/bufferline.nix
