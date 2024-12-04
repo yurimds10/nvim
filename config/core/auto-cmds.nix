@@ -71,5 +71,20 @@
         '';
       };
     }
+
+    #-- resize splits if window got resized (from LazyVim)
+    {
+      group = "resize_splits";
+      event = ["VimResized"];
+      callback = {
+        __raw = ''
+          function()
+            local current_tab = vim.fn.tabpagenr()
+            vim.cmd("tabdo wincmd =")
+            vim.cmd("tabnext " .. current_tab)
+          end
+        '';
+      };
+    }
   ];
 }
