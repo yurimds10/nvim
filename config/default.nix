@@ -40,6 +40,7 @@
 
     # Utils
     ./plugins/utils/telescope.nix
+    ./plugins/utils/toggleterm.nix
     ./plugins/utils/which-key.nix
   ];
 }

@@ -15,12 +15,6 @@
             "prettier"
           ]
         ];
-        css = [
-          [
-            "prettierd"
-            "prettier"
-          ]
-        ];
         javascript = [
           [
             "prettierd"
