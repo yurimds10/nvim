@@ -25,6 +25,11 @@
         enable = true;
         package = pkgs.wl-clipboard;
       };
+
+      xclip = {
+        enable = true;
+        package = pkgs.xclip;
+      };
     };
   };
 

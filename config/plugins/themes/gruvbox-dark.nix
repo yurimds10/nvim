@@ -22,11 +22,7 @@
       contrast = ""; #-- can be "hard", "soft" or empty string
       palette_overrides = {};
       overrides = {
-        "Directory" = { link = "GruvboxGreenBold"; };
-        "Identifier" = { link = "GruvboxOrange"; };
-        "Operator" = { fg = "#fb4934"; };
-        "String" = { fg = "#fabd2f"; };
-        
+        "Directory" = { link = "GruvboxBlueBold"; };       
       };
       dim_inactive = false;
       transparent_mode = false;
