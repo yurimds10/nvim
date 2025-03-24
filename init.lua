@@ -1,4 +1,2 @@
-require("musashi.config.options")
-require("musashi.config.lazy")
-require("musashi.config.keymaps")
-require("musashi.config.autocmds")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
